@@ -1,0 +1,22 @@
+.responsive {
+    max-width: 80%;
+}
+
+.animated-container {
+    animation: transitionIn 3s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-20deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+p {
+    margin-top: 40px;
+}
