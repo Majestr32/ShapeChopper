@@ -1,0 +1,26 @@
+{
+    "HOME": {
+        "DescriptionLabel": "Description",
+        "DescriptionP1": "Shape Chopper is some sort of hypercasual games, which uses the mechanic of swipes to slice parts of object.",
+        "DescriptionP2": "If your figure fits the required one, you win. For each success you obtain scores and the more you have, the more system will try to fail you.",
+        "DescriptionP3": "It must be the same figure with simillar angles and proportions. System is smart enough to understand that you are attempting to make the small version of original or differently displaced.",
+        "DescriptionP4": "Challenge other people in the whole world or your friends. Be precise and don`t make mistakes, because they are unforgivable.",
+        "DescriptionP5": "In order to not frighten a new user, we have a small in-game tutorial about some mechanics features, which will make your gameplay much pleasant."
+    },
+    "FAQ": {
+        "Q1": "What if my shape doesn`t fit the required one?",
+        "Q2": "If i play offline and beat record, will it be transfered to the leaderboard?",
+        "Q3": "Is it add-free?",
+        "Q4": "If i switch my mobile device, will my scores dissapear?",
+        "Q5": "Found somehow a bug?",
+        "Q1P1": "There are can be many solutions:",
+        "Q1P2": "Be more precise, maybe your shape is a bit different:",
+        "Q1P3": "Watch the in-game tutorial, it points out main mechanics",
+        "Q1P4": "If you are 100% sure it`s not your fault, write an email about the problem describing what figures must be fixed (see contacts below)",
+        "Q2P1": "Yes, it will be transfered to the leaderboard if you connect to the internet again and sign in to google account.",
+        "Q3P1": "Yes, it is.",
+        "Q4P1": "All your records are stored on your phone as well as in the leaderboard, so when you sign in to the google account it can load your record from leaderboard to a new device.",
+        "Q5P1": "Describe it and contact us (see contacts below). Your feedback matters and bug will be fixed without a doubt."
+    },
+    "CONTACTS": "Contacts"
+}
