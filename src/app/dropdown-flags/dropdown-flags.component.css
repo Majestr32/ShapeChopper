@@ -10,8 +10,9 @@ body {
     box-sizing: border-box;
 }
 
-a {
+button {
     text-decoration: none;
+    border: transparent;
 }
 
 header {
@@ -39,7 +40,6 @@ nav {
     width: 100px;
     text-align: right;
     font-weight: bold;
-    margin-top: 25px;
     position: relative;
 }
 
@@ -55,7 +55,6 @@ nav {
     display: inline-block;
     width: 32px;
     height: 32px;
-    background-image: url(https://www.countryflags.io/us/flat/32.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -81,7 +80,7 @@ nav {
     justify-content: space-between;
 }
 
-.lang-menu ul li a {
+.lang-menu ul li button {
     text-decoration: none;
     width: 125px;
     padding: 5px 10px;
@@ -89,10 +88,11 @@ nav {
 }
 
 .lang-menu ul li:hover {
-    background-color: #f2f2f2;
+    background-color: #e2dada;
+    font-size: 16px;
 }
 
-.lang-menu ul li a:before {
+.lang-menu ul li button:before {
     content: '';
     display: inline-block;
     width: 25px;
@@ -107,11 +107,11 @@ nav {
     background-image: url(https://www.countryflags.io/us/flat/32.png);
 }
 
-.rus:before {
+.ru:before {
     background-image: url(https://www.countryflags.io/RU/flat/32.png);
 }
 
-.ukr:before {
+.ua:before {
     background-image: url(https://www.countryflags.io/ua/flat/32.png);
 }
 

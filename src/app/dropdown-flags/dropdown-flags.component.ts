@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguageService } from '../_services/language.service';
 
-export interface Flag{
+interface Language{
   value: string;
-  viewValue: string;
-  img: string;
+  langName: string;
+  imgUrl: string;
 }
 
 @Component({
@@ -16,26 +17,19 @@ export interface Flag{
 export class DropdownFlagsComponent{
 
   selectedLanguage: any;
-  constructor(){
-    var languageToFind = localStorage.getItem('languageSelected');
-    this.languages.forEach(element => {
-      if(element.value == languageToFind)
-        this.selectedLanguage = element;
-    });
-    if(this.selectedLanguage == null){
-      this.selectedLanguage = this.languages[0];
-    }
+  languagesList: Language[] = [
+    {value: 'en',langName: 'English',imgUrl: 'https://www.countryflags.io/us/flat/32.png'},
+    {value: 'ru',langName: 'Russian',imgUrl: 'https://www.countryflags.io/RU/flat/32.png'},
+    {value: 'ua',langName: 'Ukrainian',imgUrl: 'https://www.countryflags.io/ua/flat/32.png'}
+  ]
+  constructor(private languageService: LanguageService){
+    this.updateCurrentLanguage();
   }
-  languages: Flag[] = [
-    { value: 'english', viewValue: 'English', img: 'https://www.megaflag.ru/sites/default/files/images/shop/products/flag_velikobritanija_new.jpg'},
-    { value: 'russian', viewValue: 'Russian', img: 'https://www.megaflag.ru/sites/default/files/images/shop/products/flag_rf_enl.jpg'},
-    { value: 'ukrainian', viewValue: 'Ukrainian', img: 'https://img5.goodfon.ru/wallpaper/nbig/7/fc/ukraine-flag-flag-of-ukraine-ukrainian-flag-ukrainian.jpg'}
-  ];
-
-  changeLanguage(event: any): void{
-    console.log(event);
-    this.selectedLanguage = event;
-    localStorage.setItem('languageSelected',this.selectedLanguage.value);
+  useLanguage(lang: string){
+    this.languageService.changeLang(lang);
+    this.updateCurrentLanguage();
   }
-
+  updateCurrentLanguage(){
+    this.selectedLanguage = this.languagesList.find(el => el.value == this.languageService.currentLang);
+  }
 }
