@@ -15,10 +15,11 @@ import { HomeComponent } from './home/home.component';
 import { FaqComponent } from './faq/faq.component';
 import { DropdownFlagsComponent } from './dropdown-flags/dropdown-flags.component';
 import { FooterComponent } from './footer/footer.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 export function HttpLoaderFactory(http: HttpClient){
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ export function HttpLoaderFactory(http: HttpClient){
       },
     }),
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
